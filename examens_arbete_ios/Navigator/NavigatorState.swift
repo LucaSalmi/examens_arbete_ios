@@ -10,7 +10,7 @@ import UIKit
 
 enum AppState: Int{
     
-    case Login = 0, HomePage, CreatePost, RegisterUser, Loading
+    case Login = 0, HomePage
 }
 
 // @Main Actor forces it to run on the main thread.
@@ -25,14 +25,5 @@ enum AppState: Int{
     }
     func goToLogin(){
         self.appState = .Login
-    }
-    func goToCreatePost(){
-        self.appState = .CreatePost
-    }
-    func goToRegisterUser(){
-        self.appState = .RegisterUser
-    }
-    func goToLoading(){
-        self.appState = .Loading
     }
 }
