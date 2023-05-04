@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        @State var isLoggedIn = false
+        @ObservedObject var navigatorState : StateController
+        
+        init() {
+            
+            navigatorState = StateController()
         }
-        .padding()
-    }
-}
+        
+            
+        var body: some View {
+            
+            switch navigatorState.appState {
+                
+            case .Login:
+                LoginView(state: navigatorState)
+            case .HomePage:
+                LoginView(state: navigatorState)
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+            case .CreatePost:
+                LoginView(state: navigatorState)
+
+            
+                
+            }
+        }
 }
