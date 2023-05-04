@@ -22,12 +22,15 @@ struct ContentView: View {
             switch navigatorState.appState {
                 
             case .Login:
-                LoginView(state: navigatorState)
+                LoginView(navigatorState: navigatorState)
             case .HomePage:
-                LoginView(state: navigatorState)
-
+                HomePage(navigatorState: navigatorState)
             case .CreatePost:
-                LoginView(state: navigatorState)
+                LoginView(navigatorState: navigatorState)
+            case .RegisterUser:
+                LoginView(navigatorState: navigatorState)
+            case .Loading:
+                LoginView(navigatorState: navigatorState)
 
             
                 

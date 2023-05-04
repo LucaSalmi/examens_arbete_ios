@@ -6,41 +6,48 @@
 //
 
 import SwiftUI
+import Combine
 
 struct LoginView: View {
     
-    @ObservedObject var state: StateController
+    @ObservedObject private var navigatorState: StateController
+    @ObservedObject private var viewModel: LoginViewModel
     
-    let userManager = UserManager.userManager
+    init(viewModel: LoginViewModel = LoginViewModel(), navigatorState : StateController) {
+        self.viewModel = viewModel
+        self.navigatorState = navigatorState
+    }
     
-    @State var eMail: String = ""
-    @State var password: String = ""
-    @State private var showRegisterAccount = false
-    @State var saveLogin = false
-    @State var isLoading = false
-    @State var isConnected = false
+    var buttonOpacity: Double {
+        return viewModel.loginFormIsValid ? 1 : 0.5
+    }
     
     var body: some View {
-        VStack{
-            Text("Login")
-            
-            TextField("E-mail", text: $eMail)
-                .padding()
-                .textFieldStyle(.roundedBorder)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
-            
-            SecureInputField("Password", text: $password)
-                .padding()
-                .textFieldStyle(.roundedBorder)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
-            
-            Button("Login") {
-                print("mail: " + eMail)
-                print("password: " + password)
+        NavigationView {
+            VStack{
+                Form{
+                    Section {
+                        TextField("E-Mail", text: $viewModel.userEmail)
+                            .keyboardType(.emailAddress)
+                        SecureInputField("Password", text: $viewModel.userPassword)
+                    }
+                    NavigationLink("Register") {
+                        RegisterView()
+                    }.padding()
+                    Button("Login"){
+                        navigatorState.goToHomepage()
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .opacity(buttonOpacity)
+                    .disabled(!viewModel.loginFormIsValid)
+                }
             }
         }
+        
+        
     }
 }
 
