@@ -10,10 +10,8 @@ import SwiftUI
 struct HomePage: View {
 
     var body: some View {
-        Button("Logout") {
-            AuthService().signOut()
-            StateController.nav
-                .goToLogin()
+        NavigationView{
+            EndlessList()
         }
     }
 }

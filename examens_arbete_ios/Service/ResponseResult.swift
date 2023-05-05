@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum Result: Int{
+enum ResultType: Int{
     
     case Initial = 0, Success ,Error
 }
 
 class ResponseResult{
-    var resultType : Result = .Initial
+    var resultType : ResultType = .Initial
     var error : Error? = nil
     
-    init(resultType: Result, error: Error? = nil) {
+    init(resultType: ResultType, error: Error? = nil) {
         self.resultType = resultType
         self.error = error
     }

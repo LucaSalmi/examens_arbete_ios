@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C84ACF692A04EE250030DBC7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF682A04EE250030DBC7 /* LoadingView.swift */; };
 		C84ACF6F2A0508280030DBC7 /* MailInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF6E2A0508280030DBC7 /* MailInputField.swift */; };
+		C84ACF712A050EAA0030DBC7 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF702A050EAA0030DBC7 /* PostList.swift */; };
+		C84ACF742A050EEC0030DBC7 /* ListContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF732A050EEC0030DBC7 /* ListContentViewModel.swift */; };
+		C84ACF762A050F260030DBC7 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF752A050F260030DBC7 /* UserPost.swift */; };
 		C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */; };
 		C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53092A03A812007CCFEE /* ContentView.swift */; };
 		C8DA530C2A03A813007CCFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DA530B2A03A813007CCFEE /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		C84ACF682A04EE250030DBC7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C84ACF6E2A0508280030DBC7 /* MailInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailInputField.swift; sourceTree = "<group>"; };
+		C84ACF702A050EAA0030DBC7 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		C84ACF732A050EEC0030DBC7 /* ListContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentViewModel.swift; sourceTree = "<group>"; };
+		C84ACF752A050F260030DBC7 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
 		C8DA53042A03A812007CCFEE /* examens_arbete_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examens_arbete_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = examens_arbete_iosApp.swift; sourceTree = "<group>"; };
 		C8DA53092A03A812007CCFEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C84ACF722A050ED40030DBC7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C84ACF732A050EEC0030DBC7 /* ListContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C8DA52FB2A03A812007CCFEE = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +166,7 @@
 		C8DA53202A03ACB5007CCFEE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C84ACF752A050F260030DBC7 /* UserPost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +177,7 @@
 				C84ACF682A04EE250030DBC7 /* LoadingView.swift */,
 				C8DA53242A03AE19007CCFEE /* SecureInputField.swift */,
 				C84ACF6E2A0508280030DBC7 /* MailInputField.swift */,
+				C84ACF702A050EAA0030DBC7 /* PostList.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -178,6 +194,7 @@
 		C8DA53412A043AE4007CCFEE /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				C84ACF722A050ED40030DBC7 /* ViewModels */,
 				C8DA53422A043AF1007CCFEE /* HomePage.swift */,
 			);
 			path = HomePage;
@@ -276,14 +293,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8DA53382A041DEC007CCFEE /* AppDelegate.swift in Sources */,
+				C84ACF712A050EAA0030DBC7 /* PostList.swift in Sources */,
 				C8DA53432A043AF1007CCFEE /* HomePage.swift in Sources */,
 				C8DA53482A0444C3007CCFEE /* LoginViewModel.swift in Sources */,
 				C8DA53462A044497007CCFEE /* SignUpViewModel.swift in Sources */,
 				C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */,
 				C8DA53182A03A96D007CCFEE /* NavigatorState.swift in Sources */,
 				C8DA533D2A0426DE007CCFEE /* ResponseResult.swift in Sources */,
+				C84ACF742A050EEC0030DBC7 /* ListContentViewModel.swift in Sources */,
 				C8DA533B2A042109007CCFEE /* AuthService.swift in Sources */,
 				C84ACF6F2A0508280030DBC7 /* MailInputField.swift in Sources */,
+				C84ACF762A050F260030DBC7 /* UserPost.swift in Sources */,
 				C8DA53252A03AE19007CCFEE /* SecureInputField.swift in Sources */,
 				C8DA534A2A044D4F007CCFEE /* RegisterView.swift in Sources */,
 				C8DA531C2A03AC2C007CCFEE /* LoginView.swift in Sources */,
