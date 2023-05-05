@@ -25,9 +25,13 @@ struct SecureInputField: View {
             Group {
                 if isSecured {
                     SecureField(title, text: $password)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled(true)
                     
                 } else {
                     TextField(title, text: $password)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled(true)
                     
                 }
                 

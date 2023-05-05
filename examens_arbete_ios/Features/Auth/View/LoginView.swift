@@ -27,17 +27,13 @@ struct LoginView: View {
                 VStack{
                     Form{
                         Section {
-                            TextField("E-Mail", text: $viewModel.userEmail)
-                                .keyboardType(.emailAddress)
-                                .textInputAutocapitalization(.never)
+                            MailInputField("E-Mail", text: $viewModel.userEmail)
                             SecureInputField("Password", text: $viewModel.userPassword)
-                                .textInputAutocapitalization(.never)
                         }
                         NavigationLink("Register") {
                             RegisterView()
                         }.padding()
                         Button("Login"){
-                            viewModel.isLoading = true
                             viewModel.loginUser()
                             
                         }
