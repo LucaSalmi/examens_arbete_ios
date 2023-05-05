@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84ACF692A04EE250030DBC7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF682A04EE250030DBC7 /* LoadingView.swift */; };
 		C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */; };
 		C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53092A03A812007CCFEE /* ContentView.swift */; };
 		C8DA530C2A03A813007CCFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DA530B2A03A813007CCFEE /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C84ACF682A04EE250030DBC7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C8DA53042A03A812007CCFEE /* examens_arbete_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examens_arbete_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = examens_arbete_iosApp.swift; sourceTree = "<group>"; };
 		C8DA53092A03A812007CCFEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				C8DA530B2A03A813007CCFEE /* Assets.xcassets */,
 				C8DA530D2A03A813007CCFEE /* Preview Content */,
 				C8DA53372A041DEC007CCFEE /* AppDelegate.swift */,
+				C84ACF682A04EE250030DBC7 /* LoadingView.swift */,
 			);
 			path = examens_arbete_ios;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C8DA53252A03AE19007CCFEE /* SecureInputField.swift in Sources */,
 				C8DA534A2A044D4F007CCFEE /* RegisterView.swift in Sources */,
 				C8DA531C2A03AC2C007CCFEE /* LoginView.swift in Sources */,
+				C84ACF692A04EE250030DBC7 /* LoadingView.swift in Sources */,
 				C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

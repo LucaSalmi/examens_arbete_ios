@@ -9,31 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
         @State var isLoggedIn = false
-        @ObservedObject var navigatorState : StateController
-        
-        init() {
-            
-            navigatorState = StateController()
-        }
+    @ObservedObject var navigatorState = StateController.nav
         
             
         var body: some View {
             
             switch navigatorState.appState {
-                
             case .Login:
-                LoginView(navigatorState: navigatorState)
+                LoginView()
             case .HomePage:
-                HomePage(navigatorState: navigatorState)
-            case .CreatePost:
-                LoginView(navigatorState: navigatorState)
-            case .RegisterUser:
-                LoginView(navigatorState: navigatorState)
-            case .Loading:
-                LoginView(navigatorState: navigatorState)
-
-            
-                
+                HomePage()
             }
         }
 }

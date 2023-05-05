@@ -13,17 +13,24 @@ import Combine
 
 class AuthService : ObservableObject {
     
-    @Published var loading = false
-    @Published var result = ResponseResult(resultType: .Initial)
     private let auth = Auth.auth()
     
-    func getCurrentUser()-> User?{
+    func getCurrentUser() -> User?{
         return auth.currentUser
     }
     
-    func loginWithEmailAndPassword(eMail: String, password: String){
+    func loginWithEmailAndPassword(eMail: String, password: String)  -> ResponseResult{
         
-        auth.signIn(withEmail: eMail, password: password)
+        var response = ResponseResult(resultType: .Initial)
+        
+        auth.signIn(withEmail: eMail, password: password){result, error in
+            if(error != nil){
+                response = ResponseResult(resultType: .Error, error: error)
+            }else{
+                response = ResponseResult(resultType: .Success)
+            }
+        }
+        return response
     }
     
     func signOut()  {

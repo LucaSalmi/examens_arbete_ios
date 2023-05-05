@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HomePage: View {
-    @ObservedObject var navigatorState: StateController
 
     var body: some View {
         Button("Logout") {
             AuthService().signOut()
-            navigatorState.goToLogin()
+            StateController.nav
+                .goToLogin()
         }
     }
 }
