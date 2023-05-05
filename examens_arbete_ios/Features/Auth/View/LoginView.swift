@@ -15,7 +15,8 @@ struct LoginView: View {
     init(viewModel: LoginViewModel = LoginViewModel()) {
         self.viewModel = viewModel
     }
-    
+
+
     var buttonOpacity: Double {
         return viewModel.loginFormIsValid ? 1 : 0.5
     }
@@ -46,12 +47,17 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .opacity(buttonOpacity)
                         .disabled(!viewModel.loginFormIsValid)
+                        .alert(Text(viewModel.result.error?.localizedDescription ?? "Error"), isPresented: $viewModel.hasError) {
+                            Button("Ok", role: .cancel){
+                                viewModel.hasError = false
+                            }
+                        }
                     }
                 }
             }
             
             if(viewModel.isLoading){
-                ModalView(showLoading: $viewModel.isLoading)
+                LoadingView(showLoading: $viewModel.isLoading)
             }
         }
     }

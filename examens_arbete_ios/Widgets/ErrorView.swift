@@ -1,5 +1,5 @@
 //
-//  LoadingView.swift
+//  ErrorView.swift
 //  examens_arbete_ios
 //
 //  Created by Luca Salmi on 2023-05-05.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ModalView: View {
-    @Binding var showLoading: Bool
+struct ErrorView: View {
+    @Binding var showError: Bool
+    @Binding var error: Error
 
     @State var fadeAlpha: CGFloat = 0.0 // start invisible
     var body: some View {
@@ -24,3 +25,4 @@ struct ModalView: View {
         .onAppear { fadeAlpha = 1.0 } // animate to fully visible on appearance
     }
 }
+

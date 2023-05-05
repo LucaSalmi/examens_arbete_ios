@@ -19,20 +19,6 @@ class AuthService : ObservableObject {
         return auth.currentUser
     }
     
-    func loginWithEmailAndPassword(eMail: String, password: String)  -> ResponseResult{
-        
-        var response = ResponseResult(resultType: .Initial)
-        
-        auth.signIn(withEmail: eMail, password: password){result, error in
-            if(error != nil){
-                response = ResponseResult(resultType: .Error, error: error)
-            }else{
-                response = ResponseResult(resultType: .Success)
-            }
-        }
-        return response
-    }
-    
     func signOut()  {
         do{
             try auth.signOut()

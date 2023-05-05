@@ -17,6 +17,7 @@ final class LoginViewModel: ObservableObject {
     @Published var userEmail = ""
     @Published var userPassword = ""
     @Published var isLoading = false
+    @Published var hasError = false
     @Published var result = ResponseResult(resultType: .Initial)
     
     
@@ -40,13 +41,6 @@ final class LoginViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .assign(to: \.userIsAuthenticated, on: self)
             .store(in: &publishers)
-        
-        isUserAuthenticated.sink { result in
-            if(result){
-
-            }
-        }.store(in: &publishers)
-        
     }
     
     func loginUser(){
@@ -54,6 +48,7 @@ final class LoginViewModel: ObservableObject {
         auth.signIn(withEmail: userEmail, password: userPassword){result, error in
             self.isLoading = false
             if(error != nil){
+                self.hasError = true
                 self.result = ResponseResult(resultType: .Error, error: error)
             }else{
                 self.result = ResponseResult(resultType: .Success)

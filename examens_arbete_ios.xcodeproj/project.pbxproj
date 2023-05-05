@@ -100,7 +100,6 @@
 				C8DA530B2A03A813007CCFEE /* Assets.xcassets */,
 				C8DA530D2A03A813007CCFEE /* Preview Content */,
 				C8DA53372A041DEC007CCFEE /* AppDelegate.swift */,
-				C84ACF682A04EE250030DBC7 /* LoadingView.swift */,
 			);
 			path = examens_arbete_ios;
 			sourceTree = "<group>";
@@ -158,6 +157,7 @@
 		C8DA53232A03AE05007CCFEE /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				C84ACF682A04EE250030DBC7 /* LoadingView.swift */,
 				C8DA53242A03AE19007CCFEE /* SecureInputField.swift */,
 			);
 			path = Widgets;
