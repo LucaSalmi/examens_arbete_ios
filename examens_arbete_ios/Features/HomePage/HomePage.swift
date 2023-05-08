@@ -11,7 +11,15 @@ struct HomePage: View {
 
     var body: some View {
         NavigationView{
-            EndlessList()
+            ZStack{
+                EndlessList()
+            }.toolbar{
+                ToolbarItem(placement: .bottomBar) {
+                    NavigationLink("Create Post"){
+                        CreatePostView()
+                    }
+                }
+            }
         }
     }
 }

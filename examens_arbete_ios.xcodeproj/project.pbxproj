@@ -13,6 +13,7 @@
 		C84ACF742A050EEC0030DBC7 /* ListContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF732A050EEC0030DBC7 /* ListContentViewModel.swift */; };
 		C84ACF762A050F260030DBC7 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84ACF752A050F260030DBC7 /* UserPost.swift */; };
 		C84E24DB2A08E4B0007F63B6 /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24DA2A08E4B0007F63B6 /* ListCard.swift */; };
+		C84E24DE2A08F4CD007F63B6 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24DD2A08F4CD007F63B6 /* CreatePostView.swift */; };
 		C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */; };
 		C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53092A03A812007CCFEE /* ContentView.swift */; };
 		C8DA530C2A03A813007CCFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DA530B2A03A813007CCFEE /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		C84ACF732A050EEC0030DBC7 /* ListContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentViewModel.swift; sourceTree = "<group>"; };
 		C84ACF752A050F260030DBC7 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
 		C84E24DA2A08E4B0007F63B6 /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
+		C84E24DD2A08F4CD007F63B6 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		C8DA53042A03A812007CCFEE /* examens_arbete_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examens_arbete_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = examens_arbete_iosApp.swift; sourceTree = "<group>"; };
 		C8DA53092A03A812007CCFEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 				C84E24DA2A08E4B0007F63B6 /* ListCard.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		C84E24DC2A08F4BB007F63B6 /* Create Post */ = {
+			isa = PBXGroup;
+			children = (
+				C84E24DD2A08F4CD007F63B6 /* CreatePostView.swift */,
+			);
+			path = "Create Post";
 			sourceTree = "<group>";
 		};
 		C8DA52FB2A03A812007CCFEE = {
@@ -149,6 +159,7 @@
 		C8DA53162A03A957007CCFEE /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C84E24DC2A08F4BB007F63B6 /* Create Post */,
 				C8DA53412A043AE4007CCFEE /* HomePage */,
 				C8DA53192A03AC0F007CCFEE /* Auth */,
 			);
@@ -318,6 +329,7 @@
 				C84ACF762A050F260030DBC7 /* UserPost.swift in Sources */,
 				C8DA53252A03AE19007CCFEE /* SecureInputField.swift in Sources */,
 				C8DA534A2A044D4F007CCFEE /* RegisterView.swift in Sources */,
+				C84E24DE2A08F4CD007F63B6 /* CreatePostView.swift in Sources */,
 				C8DA531C2A03AC2C007CCFEE /* LoginView.swift in Sources */,
 				C84ACF692A04EE250030DBC7 /* LoadingView.swift in Sources */,
 				C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */,
