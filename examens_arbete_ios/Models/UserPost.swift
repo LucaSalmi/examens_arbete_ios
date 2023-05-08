@@ -20,4 +20,16 @@ class UserPost: Identifiable, Codable{
         self.createdAt = createdAt
         self.id = id
     }
+    
+    func toMap() -> [String:Any]{
+        let ref = DataBaseConstants()
+        return [
+            ref.title: title,
+            ref.body: body,
+            ref.createdAt: createdAt,
+            ref.userName: userName,
+            ref.id: id,
+
+        ]
+    }
 }

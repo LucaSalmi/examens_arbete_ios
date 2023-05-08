@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import Firebase
 import FirebaseFirestoreSwift
+import SwiftUI
 
 final class CreatePostViewModel: ObservableObject {
     
@@ -34,10 +35,21 @@ final class CreatePostViewModel: ObservableObject {
             .store(in: &publishers)
     }
     
-    func signUpUser(){
+    func saveNewPost(presentView:Binding<PresentationMode>){
         self.isLoading = true
-        let newPost = UserPost(title: title, body: body, userName: auth.currentUser?.email ?? "Anonymous", createdAt: getDate(), id: db.collection("posts").document().documentID)
-        // TODO: Add function to save to Firestore
+        let ref = DataBaseConstants()
+        let newPost = UserPost(title: title, body: body, userName: auth.currentUser?.email ?? "Anonymous", createdAt: getDate(), id: db.collection(ref.posts).document().documentID)
+        // Add a new document in collection
+        db.collection(ref.posts).document(newPost.id).setData(newPost.toMap()) { error in
+            self.isLoading = false
+            if(error != nil){
+                self.hasError = true
+                self.result = ResponseResult(resultType: .Error, error: error)
+            }else{
+                self.result = ResponseResult(resultType: .Success)
+                presentView.wrappedValue.dismiss()
+            }
+        }
     }
     
     func getDate() -> String{

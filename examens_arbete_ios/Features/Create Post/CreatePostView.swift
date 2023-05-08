@@ -14,8 +14,45 @@ struct CreatePostView: View {
     init(viewModel: CreatePostViewModel = CreatePostViewModel()) {
         self.viewModel = viewModel
     }
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        // TODO: Add title text input field, body text input field and save button
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack {
+                Form {
+                    Section {
+                        TextField("Title", text: $viewModel.title)
+                        TextField("Body", text: $viewModel.body, axis: .vertical)
+                    }
+                    
+                    Button("Save") {
+                        viewModel.saveNewPost(presentView: presentationMode)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .opacity(buttonOpacity)
+                    .disabled(!viewModel.formIsValid)
+                    .alert(Text(viewModel.result.error?.localizedDescription ?? "Error"), isPresented: $viewModel.hasError) {
+                        Button("Ok", role: .cancel){
+                            viewModel.hasError = false
+                        }
+                    }
+                }
+            }
+            
+            if(viewModel.isLoading){
+                LoadingView(showLoading: $viewModel.isLoading)
+            }
+        }
     }
+    
+    var buttonOpacity: Double {
+        return viewModel.formIsValid ? 1 : 0.5
+    }
+    
+    
+    
 }

@@ -15,6 +15,7 @@
 		C84E24DB2A08E4B0007F63B6 /* ListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24DA2A08E4B0007F63B6 /* ListCard.swift */; };
 		C84E24DE2A08F4CD007F63B6 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24DD2A08F4CD007F63B6 /* CreatePostView.swift */; };
 		C84E24E12A08F9CA007F63B6 /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24E02A08F9CA007F63B6 /* CreatePostViewModel.swift */; };
+		C84E24E32A093895007F63B6 /* DatabaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E24E22A093895007F63B6 /* DatabaseConstants.swift */; };
 		C8DA53082A03A812007CCFEE /* examens_arbete_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */; };
 		C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA53092A03A812007CCFEE /* ContentView.swift */; };
 		C8DA530C2A03A813007CCFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DA530B2A03A813007CCFEE /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		C84E24DA2A08E4B0007F63B6 /* ListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCard.swift; sourceTree = "<group>"; };
 		C84E24DD2A08F4CD007F63B6 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		C84E24E02A08F9CA007F63B6 /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		C84E24E22A093895007F63B6 /* DatabaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConstants.swift; sourceTree = "<group>"; };
 		C8DA53042A03A812007CCFEE /* examens_arbete_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examens_arbete_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DA53072A03A812007CCFEE /* examens_arbete_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = examens_arbete_iosApp.swift; sourceTree = "<group>"; };
 		C8DA53092A03A812007CCFEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				C8DA530B2A03A813007CCFEE /* Assets.xcassets */,
 				C8DA530D2A03A813007CCFEE /* Preview Content */,
 				C8DA53372A041DEC007CCFEE /* AppDelegate.swift */,
+				C84E24E22A093895007F63B6 /* DatabaseConstants.swift */,
 			);
 			path = examens_arbete_ios;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				C84E24E12A08F9CA007F63B6 /* CreatePostViewModel.swift in Sources */,
 				C8DA53432A043AF1007CCFEE /* HomePage.swift in Sources */,
 				C8DA53482A0444C3007CCFEE /* LoginViewModel.swift in Sources */,
+				C84E24E32A093895007F63B6 /* DatabaseConstants.swift in Sources */,
 				C8DA53462A044497007CCFEE /* SignUpViewModel.swift in Sources */,
 				C84E24DB2A08E4B0007F63B6 /* ListCard.swift in Sources */,
 				C8DA530A2A03A812007CCFEE /* ContentView.swift in Sources */,

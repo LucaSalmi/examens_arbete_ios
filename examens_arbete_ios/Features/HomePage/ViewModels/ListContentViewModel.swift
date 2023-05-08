@@ -18,16 +18,11 @@ class ContentDataSource: ObservableObject {
     let db = Firestore.firestore()
     
     init() {
-        var count = 0
-        while count < 10 {
-            loadPosts()
-            count += 1
-        }
-        
+        loadPosts()
     }
     
     func loadPosts() {
-        db.collection("posts").addSnapshotListener { querySnapshot, error in
+        db.collection("posts").addSnapshotListener {querySnapshot, error in
             guard let documents = querySnapshot?.documents else {
                 print("Error fetching documents: \(error!)")
                 return
@@ -42,6 +37,10 @@ class ContentDataSource: ObservableObject {
                 case .failure(let error) :
                     print("Error decoding item: \(error)")
                 }
+            }
+            
+            if(self.self.posts.count > 0){
+                self.posts = self.posts.sorted(by: { $0.createdAt.compare($1.createdAt) == .orderedDescending })
             }
         }
     }
