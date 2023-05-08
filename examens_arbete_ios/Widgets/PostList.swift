@@ -13,8 +13,7 @@ struct EndlessList: View {
   var body: some View {
     List {
       ForEach(dataSource.posts) { post in
-        Text(post.title)
-          .padding(.all, 30)
+        ListCard(currentPost: post)
       }
 
       if dataSource.isLoadingPage {
